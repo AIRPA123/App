@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>StyleMe AI | The Future of Personal Styling</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "secondary": "#575e70",
+                "surface-tint": "#494bd6",
+                "on-tertiary-fixed": "#0d1c2d",
+                "surface-container-highest": "#e1e3e4",
+                "surface-dim": "#d9dadb",
+                "primary": "#4648d4",
+                "on-primary": "#ffffff",
+                "surface-container-lowest": "#ffffff",
+                "on-tertiary": "#ffffff",
+                "on-secondary-container": "#5c6274",
+                "inverse-surface": "#2e3132",
+                "surface-container": "#edeeef",
+                "on-background": "#191c1d",
+                "primary-fixed": "#e1e0ff",
+                "tertiary-fixed-dim": "#b9c8de",
+                "outline-variant": "#c7c4d7",
+                "on-secondary-fixed": "#141b2b",
+                "secondary-container": "#d9dff5",
+                "surface": "#f8f9fa",
+                "error-container": "#ffdad6",
+                "tertiary-container": "#677689",
+                "surface-variant": "#e1e3e4",
+                "on-primary-fixed-variant": "#2f2ebe",
+                "on-error": "#ffffff",
+                "on-primary-fixed": "#07006c",
+                "inverse-primary": "#c0c1ff",
+                "secondary-fixed-dim": "#c0c6db",
+                "tertiary": "#4f5d70",
+                "secondary-fixed": "#dce2f7",
+                "primary-fixed-dim": "#c0c1ff",
+                "on-error-container": "#93000a",
+                "on-secondary": "#ffffff",
+                "surface-container-low": "#f3f4f5",
+                "on-secondary-fixed-variant": "#404758",
+                "outline": "#767586",
+                "surface-bright": "#f8f9fa",
+                "surface-container-high": "#e7e8e9",
+                "on-surface-variant": "#464554",
+                "on-tertiary-container": "#fdfcff",
+                "on-primary-container": "#fffbff",
+                "error": "#ba1a1a",
+                "tertiary-fixed": "#d4e4fa",
+                "on-tertiary-fixed-variant": "#39485a",
+                "background": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "inverse-on-surface": "#f0f1f2",
+                "primary-container": "#6063ee"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "lg": "24px",
+                "xl": "40px",
+                "container-max": "1280px",
+                "unit": "4px",
+                "md": "16px",
+                "gutter": "24px",
+                "sm": "8px",
+                "xs": "4px",
+                "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                "title-md": ["Inter"],
+                "body-md": ["Inter"],
+                "label-md": ["Inter"],
+                "headline-lg": ["Inter"],
+                "body-lg": ["Inter"],
+                "display-lg": ["Inter"],
+                "headline-lg-mobile": ["Inter"],
+                "label-sm": ["Inter"]
+            },
+            "fontSize": {
+                "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .parallax-bg {
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-surface/80 backdrop-blur-md border-b border-surface-container-highest shadow-sm">
+<nav class="flex justify-between items-center px-lg py-md max-w-container-max mx-auto">
+<div class="flex items-center gap-xs">
+<span class="font-title-md text-title-md font-bold text-primary">StyleMe AI</span>
+</div>
+<div class="hidden md:flex items-center gap-xl">
+<a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary transition-colors" href="#">How It Works</a>
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="#">Styles</a>
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="#">Pricing</a>
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="#">Support</a>
+</div>
+<div class="flex items-center gap-md">
+<button class="hidden sm:block font-label-md text-label-md text-primary hover:underline transition-all">Login</button>
+<button class="bg-primary text-on-primary px-lg py-sm rounded-full font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all duration-200 shadow-md">
+                    Get Started
+                </button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden px-margin-mobile md:px-lg">
+<div class="max-w-container-max mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-xl items-center py-xl">
+<div class="z-10 text-center lg:text-left">
+<span class="inline-block px-md py-xs bg-secondary-container text-on-secondary-fixed-variant rounded-full font-label-sm text-label-sm mb-md uppercase tracking-wider">AI-Powered Fashion</span>
+<h1 class="font-display-lg text-display-lg md:text-[64px] md:leading-[72px] mb-lg text-on-surface">
+                        Your Personal <br/> <span class="text-primary">Digital Atelier</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-xl max-w-xl mx-auto lg:mx-0">
+                        Experience the fusion of high-end editorial curation and advanced algorithmic precision. Discover your signature look with StyleMe AI.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-md justify-center lg:justify-start">
+<button class="bg-primary text-on-primary px-xl py-md rounded-xl font-title-md text-title-md shadow-lg hover:shadow-xl hover:-translate-y-1 active:scale-95 transition-all">
+                            Find My Style
+                        </button>
+<button class="border-2 border-secondary text-secondary px-xl py-md rounded-xl font-title-md text-title-md hover:bg-secondary/5 transition-all">
+                            View Gallery
+                        </button>
+</div>
+<div class="mt-xl flex items-center justify-center lg:justify-start gap-md">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-cover bg-center" data-alt="A close-up portrait of a chic, fashionable woman with elegant makeup, set against a soft beige studio background, representing a premium fashion app user. The lighting is editorial and high-key, reflecting a sophisticated and modern aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuACmFqa4IIBFgs18UXGE-8cVETuE8OkTZB3ZkKRHDhAOi2RdWuMSBX8BNiN8INWFA0NutkXNu5SAWpOPUzcz-WHSBR5zeu_ce0BQ9JwqWibiwLQCkYHFcH4gKqHTj1cZNX2qKJprc-RKoiP1-YFBWezRIvVD0AaKO6FQdgmBSYQ53O3ymY5Jfx15QQtUngLaMMqTkARkh7FFZk2VCTs1yFk7jb8LsczjuvTdAGtZl5-R8j9YI5i-4XUdtkmk3gL8ZB8KPmfxRTER5o')"></div>
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-cover bg-center" data-alt="A stylish man wearing a tailored charcoal suit and minimalist glasses, looking confidently at the camera. The background is a clean, modern architectural space with soft natural lighting, conveying professional styling excellence." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDKday8PNTAs5h7vf7C2JxfzhRBJntyhyYxQ7-8DWm5n79thhsiY9HM7UAsUKiAFtVnuXmXVg8at9Ju5FX7jhF1mcfG5FQs5OTuqa84HLbVEHsfeZCnTJma6T8hFXgAJwaob3WuDxzCmnqxspbC_fWI3AQvL93c7HAUwSNrDntZ8j5gb8wj4BtcZLIU7Bp56GjUcBHLFYwreC_JJ7Vc6wTSP2PV9bQwcri_ASsx1hQogKtlc7dle0Q8L996oh05mUCBa9lpD09JnfI')"></div>
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-cover bg-center" data-alt="A trendy young person with vibrant personal style and creative accessories, standing in a brightly lit urban fashion studio. The image mood is high-energy, colorful, and technologically forward-thinking." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAHnps7QniSuL_2QVM3o9z7B2ZeqeLWks22rWScOxes1neEUm7oxFIkEZqDaLBdG14VvctTgyp1kxDnMRpM4sjFZ0iS2Z4VS5jG6kCHodsD_4BWSJS3D2Dk3Iiqltm_0kzQuN2n1g5JbrTKJ-lBhzHjJuj3qqIXwgBPu_2vfERhVvzMowA3epzL4p6V-_D5vrXPn5hh7HDjgq-bPeDbUxOvdDujyBrOTb0RKy4fQALylJqulle7QOCqH8yF_3RSms8onyM-6FQ20D8')"></div>
+</div>
+<p class="font-label-md text-label-md text-secondary">Joined by <span class="font-bold text-on-surface">50,000+</span> fashion enthusiasts</p>
+</div>
+</div>
+<!-- Hero Imagery - Bento Style -->
+<div class="relative hidden lg:block h-[600px]">
+<div class="absolute top-0 right-0 w-3/4 h-3/4 rounded-3xl shadow-2xl overflow-hidden transform rotate-3 hover:rotate-0 transition-transform duration-500">
+<img class="w-full h-full object-cover" data-alt="High-end fashion photography of a stylish young male and female model wearing modern casual outfits (smart casual, relaxed tailoring, high-quality basics). The vibe is 'Personal Digital Atelier' - sophisticated yet approachable. Clean studio background with soft lighting, matching the violet and neutral aesthetic of StyleMe AI. Professional, editorial quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpldJ2xUuf7_P9GQW-rEAWQOz-0ujXMdc-k00mXAEeMmLNC8eKtC9AqWjf6WRAdWfCdBig3Tdfl4u0YFkm-ankrwOtcoC3EHk0tdn1z6i7M-z01ixoUObaX0YbogjzG1jik7DHf2hJr4HIr5JVg2s4yLQNZUZgQXsd4KPFJw8HSbQKauVMpc5-6_ZFgbFxnVCywbEKxvNqWerkti51yaXtrm1CchCk2LL4CXAxjZpvUv69BWA5c05jnPnC18_edgVKkb7XPWLlgt4"/>
+</div>
+<div class="absolute bottom-4 left-0 w-1/2 h-2/3 rounded-3xl shadow-2xl overflow-hidden transform -rotate-6 hover:rotate-0 transition-transform duration-500 border-4 border-surface">
+<img class="w-full h-full object-cover" data-alt="A lifestyle fashion photo of a man in a perfectly fitted minimalist casual outfit, walking through a sleek metropolitan plaza. The image style is crisp, clean, and professional, utilizing a natural color palette with accents of charcoal and white." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYKdy2jiloBVeqPU5X97Z301vjEeh5ftnvHQwp5CpWoaV8jb_0nVxLDEOb4fm23_UHIfppC856tP8RwWKDBA4Acq4FbV9ZKlvth0v1xkfGQci9rGwxRKgF0OeaK3JXVEz78IXJo9xIhro8BhIMUNsF3coWlfJIQoEppetm_x-_j_JnOgeXPlYLbEJBJC1oQSd1irOI1j8B2wM3hOYTRmrDXX5FTOJ3vgzij2XWR7Ld_G7Ys5nNn0NY-gpaaq7KpgQZoKpdW2tqO_4"/>
+</div>
+<!-- Decorative AI Graphic -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-surface/90 backdrop-blur-xl p-lg rounded-2xl shadow-xl border border-primary/20 animate-pulse">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary text-4xl">auto_awesome</span>
+<div>
+<p class="font-label-sm text-label-sm text-secondary">AI Analysis</p>
+<p class="font-title-md text-title-md text-on-surface">Style Match: 98%</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-xl bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-lg">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-md">How the Magic Happens</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Our proprietary fashion engine combines aesthetic theory with deep learning to curate your perfect wardrobe.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<!-- Step 1 -->
+<div class="bg-surface p-xl rounded-3xl shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-16 h-16 bg-primary-fixed rounded-2xl flex items-center justify-center mb-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">cloud_upload</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-sm">1. Upload</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Simply upload a few photos of yourself or styles you admire. Our AI respects your privacy and focuses on silhouette and color harmony.</p>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface p-xl rounded-3xl shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-16 h-16 bg-secondary-fixed rounded-2xl flex items-center justify-center mb-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-secondary text-3xl">insights</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-sm">2. Analyze</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">The engine scans 10,000+ data points including skin undertones, body proportions, and current global fashion trends.</p>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface p-xl rounded-3xl shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-16 h-16 bg-tertiary-fixed rounded-2xl flex items-center justify-center mb-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-tertiary text-3xl">check_circle</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-sm">3. Recommend</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Receive a curated lookbook with direct shopping links and styling tips tailored specifically for your unique identity.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Showcase Section -->
+<section class="py-xl overflow-hidden">
+<div class="max-w-container-max mx-auto px-lg">
+<div class="bento-grid">
+<div class="col-span-12 md:col-span-8 bg-surface-container rounded-[32px] p-xl relative overflow-hidden h-[400px]">
+<div class="relative z-10 max-w-md">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-md">Tailored For Every Occasion</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg">From boardroom elegance to weekend leisure, StyleMe AI understands the nuances of dress codes.</p>
+<button class="bg-on-surface text-surface px-lg py-sm rounded-full font-label-md text-label-md hover:opacity-90 transition-all">Explore Collections</button>
+</div>
+<div class="absolute right-[-10%] bottom-[-10%] w-[60%] h-[120%] rotate-12 rounded-3xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A montage of diverse high-fashion outfits arranged in a grid-like fashion, showcasing a variety of styles from corporate chic to avant-garde streetwear. The lighting is consistent, bright, and editorial, with a color palette emphasizing the brand's primary indigo and neutral tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9NTlXNp9Q3kf1Yplgj1IQdSvRZUv7VMXA5nyein5c_aZw7i1dBWF0fMBqxT3K5Sv83t6xOUAB0b90LcCjc6ndI3agTJttZtccrUiXVY93n87_ZBM6Ft6AUfwhbdBYC_GNLyyYiQ9gNJjPYDvb8kpqlgsVkhGf8XL5wgTcDqPSRqWwoLXdUKfTJWDB9_5TUe2YCfBNAMqaJROgOEmusVvHqy-i4Wb-Z84hbgFmJCR6tMxPUL1fkMojDlFr3Cfmm42iex44VQG0JyA"/>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 bg-primary text-on-primary rounded-[32px] p-xl flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-5xl mb-md">bolt</span>
+<h3 class="font-title-md text-title-md mb-sm">Instant Refresh</h3>
+</div>
+<p class="font-body-md text-body-md mb-xl">Get real-time feedback on your outfit choices with our 'Outfit Scan' feature.</p>
+<div class="bg-on-primary/20 p-md rounded-2xl backdrop-blur-sm border border-on-primary/10">
+<div class="flex justify-between items-center mb-xs">
+<span class="font-label-sm text-label-sm">Cohesion Score</span>
+<span class="font-bold">92/100</span>
+</div>
+<div class="w-full bg-on-primary/20 h-2 rounded-full overflow-hidden">
+<div class="bg-on-primary h-full w-[92%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-xl bg-surface">
+<div class="max-w-container-max mx-auto px-lg">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-md">Trusted by Global Tastemakers</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+<!-- Testimonial 1 -->
+<div class="p-lg bg-surface-container-lowest rounded-2xl border border-surface-container-highest shadow-sm">
+<div class="flex gap-xs text-primary mb-md">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic mb-lg">"StyleMe AI completely redefined how I view my wardrobe. The recommendations are so precise, it's like having a Vogue editor on speed dial."</p>
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-cover bg-center" data-alt="Portrait of an elegant woman with a sophisticated fashion sense, smiling softly. The lighting is soft and flattering, emphasizing a premium and luxurious lifestyle mood." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDlRzE2CvrL2lcynPm86aY1pCIxiGhJSfG_uQneYdAXvjpUzB_r3K5KGgTVgpVMEpn9A8qrkz6Ig4WEXfbtJc52y6V0DuB-LzJ9fHos_f4nUJZQrp6VWPUVHddlgSjI5Vmd4NiqjZWLFdNqoAFpMExTsSvo4wqED2jCb5JbOUymtk4S3W-rxvDthpaHS08sPp_UsLFoTL7c1GYctMKjhrKULUtn4leug4hN1dHbAkMlOQ6W7DdaK94ef7HlTeF4qnpi3KBTIvdMcE4')"></div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Elena Rodriguez</p>
+<p class="font-label-sm text-label-sm text-secondary">Fashion Director, Madrid</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="p-lg bg-surface-container-lowest rounded-2xl border border-surface-container-highest shadow-sm">
+<div class="flex gap-xs text-primary mb-md">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic mb-lg">"As someone who struggles with color theory, the AI palette analysis was a game-changer. I finally understand what shades actually work for me."</p>
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-cover bg-center" data-alt="Portrait of a modern professional man in a sharp outfit, standing against a neutral studio background. He looks confident and well-styled, representing the success of a personalized AI styling experience." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCNacVYurAC79VlPJR7cB0d-ThORyRe5Y7387G14cxjw16cb0cuk63Y2cwhcOBBcqL8UapCSpGV7Ro5iopVTdB9h5RwoDhlWJWhrgAkrURSsjhXmSfgr-IisHDia2Xx4y7SGxjqksUpYilDcqg6hPv-iaQrJ7n9bnL8kPSHSHYPdMWTFaNk7JevjqCDdB5-ogHrwLBkb5wRlONpkFI5hhYJxYXE6nPAOT8GpfQlswKSI0SRiUY2lL3uRY-1atXZz_fFnbK7-G733Ew')"></div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Marcus Chen</p>
+<p class="font-label-sm text-label-sm text-secondary">Tech Executive, San Francisco</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="p-lg bg-surface-container-lowest rounded-2xl border border-surface-container-highest shadow-sm">
+<div class="flex gap-xs text-primary mb-md">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic mb-lg">"The future of shopping is here. I love how it integrates with my favorite brands to suggest items that actually fit my style profile."</p>
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-cover bg-center" data-alt="A portrait of a trendy young woman with a creative and unique personal style. She is laughing and looks happy, set in a bright, modern indoor environment that feels fresh and current." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBlvZLR7dt3kc7cVoVD4XGNYp13Cn3NlWOfC668gVEdAyn2ahZqnFcKjyeIVBXTxBmF4Etl4o5eUwaRz_FuLWog1a1wRnlPpWyieueKOiCTgptBX6foyZztytFdLD8st_4-8yofATkQy2mads6AIatYg_Aa1oN-dD4orUxoj79rDZyZzbN_ycyqC5FwIy7eJfZBkSfIoC-wpxl0eCyKmF2yW_JEQqhM0JWbhOJGFn_AlH4HwzyniCKVo3VLPH8oqcCxOwl3_Szc2HY')"></div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Sophie Laurent</p>
+<p class="font-label-sm text-label-sm text-secondary">Influencer, Paris</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-[120px] px-lg">
+<div class="max-w-container-max mx-auto bg-inverse-surface text-inverse-on-surface rounded-[40px] p-xl text-center relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="font-display-lg text-display-lg mb-lg">Ready to Evolve Your Style?</h2>
+<p class="font-body-lg text-body-lg mb-xl max-w-2xl mx-auto opacity-80">Join the waitlist for exclusive early access to our V2 Beta features and personal styling consultations.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-md">
+<input class="px-lg py-md rounded-xl bg-surface/10 border border-surface/20 text-inverse-on-surface placeholder:text-surface/50 focus:outline-none focus:ring-2 focus:ring-primary w-full sm:w-auto min-w-[300px]" placeholder="Enter your email" type="email"/>
+<button class="bg-primary text-on-primary px-xl py-md rounded-xl font-title-md text-title-md hover:opacity-90 active:scale-95 transition-all">
+                            Join Early Access
+                        </button>
+</div>
+</div>
+<!-- Decorative background elements -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary/20 blur-[120px] rounded-full"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-surface-container-highest">
+<div class="max-w-container-max mx-auto px-lg py-xl flex flex-col md:flex-row justify-between items-center gap-lg">
+<div class="flex flex-col items-center md:items-start gap-sm">
+<span class="font-title-md text-title-md text-on-surface">StyleMe AI</span>
+<p class="font-label-sm text-label-sm text-secondary">© 2024 StyleMe AI. The Future of Personal Styling.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-xl">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:underline decoration-primary transition-all" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:underline decoration-primary transition-all" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:underline decoration-primary transition-all" href="#">Instagram</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:underline decoration-primary transition-all" href="#">Contact Us</a>
+</div>
+</div>
+</footer>
+<script>
+        // Smooth reveal animations on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'ease-out', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+
+        // Simple parallax effect for hero imagery
+        window.addEventListener('scroll', () => {
+            const scroll = window.pageYOffset;
+            const heroImages = document.querySelectorAll('.hero-parallax');
+            heroImages.forEach(img => {
+                const speed = img.getAttribute('data-speed') || 0.2;
+                img.style.transform = `translateY(${scroll * speed}px)`;
+            });
+        });
+    </script>
+</body></html>
